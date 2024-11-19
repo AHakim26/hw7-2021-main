@@ -44,12 +44,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   document.getElementById('skip').addEventListener('click', function () {
-      if (video.currentTime + 10 > video.duration) {
+  const slider = document.getElementById('slider');
+  if (slider) {
+    slider.addEventListener('input', function () {
           video.currentTime = 0;
           } else {
-          video.currentTime += 10;
+  const vintageButton = document.getElementById('vintage');
+  if (vintageButton) {
+    vintageButton.addEventListener('click', function () {
       }
-      console.log('Current time: '+video.currentTime.toFixed(2));
+  const origButton = document.getElementById('orig');
+  if (origButton) {
+    origButton.addEventListener('click', function () {
   });
 
 
