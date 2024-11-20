@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log("Good job opening the window");
-
+});
   const video = document.getElementById('player1');
 
 
@@ -44,18 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   document.getElementById('skip').addEventListener('click', function () {
-  const slider = document.getElementById('slider');
-  if (slider) {
-    slider.addEventListener('input', function () {
+      video.currentTime += 15;
+      if (video.currentTime >= video.duration) {
           video.currentTime = 0;
-          } else {
-  const vintageButton = document.getElementById('vintage');
-  if (vintageButton) {
-    vintageButton.addEventListener('click', function () {
       }
-  const origButton = document.getElementById('orig');
-  if (origButton) {
-    origButton.addEventListener('click', function () {
+      console.log('New time: ' + video.currentTime);
   });
 
 
@@ -85,4 +78,3 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('orig').addEventListener('click', function () {
       video.classList.remove('oldSchool');
   });
-});
