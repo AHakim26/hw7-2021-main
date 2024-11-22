@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   video.loop = false;
 
   const volumeDisplay = document.getElementById('volume');
-  volumeDisplay.textContent = video.volume * 100 + "%";
+
 
   document.getElementById('play').addEventListener('click', function () {
       video.play();
