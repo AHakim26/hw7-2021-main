@@ -3,25 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
   const video = document.getElementById('player1');
 
-
-
   video.autoplay = false;
   video.loop = false;
-
-
-
 
   const volumeDisplay = document.getElementById('volume');
   volumeDisplay.textContent = video.volume * 100 + "%";
 
-
-
-
-
   document.getElementById('play').addEventListener('click', function () {
       video.play();
       volumeDisplay.textContent = video.volume * 100 + "%";
-
 
   });
   document.getElementById('pause').addEventListener('click', function () {
@@ -33,15 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('New speed: '+video.playbackRate.toFixed(2));
   });
 
-
-
-
-
   document.getElementById('faster').addEventListener('click', function () {
       video.playbackRate /= 0.9;
       console.log('New speed: '+video.playbackRate. toFixed(2));
   });
-
 
   document.getElementById('skip').addEventListener('click', function () {
       video.currentTime += 10;
@@ -50,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       console.log('New time: ' + video.currentTime);
   });
-
-
 
   document.getElementById('mute').addEventListener('click', function () {
       if (video.muted) {
@@ -62,9 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
           this.textContent = 'Unmute';
       }
   });
-
-
-
 
   document.getElementById('slider').addEventListener('input', function () {
       video.volume = this.value / 100;
