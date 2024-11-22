@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   document.getElementById('skip').addEventListener('click', function () {
-      video.currentTime += 15;
+      video.currentTime += 10;
       if (video.currentTime >= video.duration) {
           video.currentTime = 0;
       }
